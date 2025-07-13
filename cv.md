@@ -1,5 +1,5 @@
 
-### $${\color{orange}ANNA}$$ $${\color{lightblue}MAKARENKO}$$
+### ANNA MAKARENKO
 #### Full Stack Developer
 ---
 

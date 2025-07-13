@@ -1,0 +1,61 @@
+:root {
+    --cv-black: #0a0516;
+    --cv-blue: #1e5da5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: gray;
+    min-height: 100vh;
+    margin: 0; padding: 0;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    background: var(--cv-black) url(/assets/img/bg-stars.png) fixed calc(50%) 0
+}
+
+.footer-center-div {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cv-footer {
+    box-shadow: 0 -15px 20px -6px var(--cv-blue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.github-image {
+    width: 30px;
+    height: 30px;
+}
+
+.rs-image {
+    height: 60px;
+}

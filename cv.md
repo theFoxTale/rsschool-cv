@@ -1,14 +1,14 @@
----
+
 ### $${\color{orange}ANNA}$$ $${\color{lightblue}MAKARENKO}$$
 #### Full Stack Developer
 ---
 
 ### Contact me:
 
-:telephone_receiver: +7 929 618-50-49  
-:email: makarenkoanna@yandex.ru  
-![Telegram](https://cdn-icons-png.flaticon.com/24/2111/2111646.png) [@annie_in_life](https://t.me/annie_in_life)  
-[LinkedIn](https://www.linkedin.com/in/анна-макаренко-369795a3)
+**phone:** +7 929 618-50-49  
+**e-mail:** makarenkoanna@yandex.ru  
+![Telegram](https://cdn-icons-png.flaticon.com/16/2111/2111646.png) [@annie_in_life](https://t.me/annie_in_life)  
+![](https://cdn-icons-png.flaticon.com/16/145/145807.png) [LinkedIn](https://www.linkedin.com/in/анна-макаренко-369795a3)
 
 
 

@@ -1,6 +1,6 @@
-# $${\color{blue}ANNA MAKARENKO}$$
-
-FullStack Developer
+---
+### $${\color{orange}ANNA}$$ $${\color{lightblue}MAKARENKO}$$
+#### Full Stack Developer
 ---
 
 ### Contact me:

@@ -1,7 +1,7 @@
 :root {
     --cv-black: #0a0516;
     --cv-blue: #1e5da5;
-    --cv-violet: #5865db;
+    --cv-violet: #5c4380;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
     font-size: 60px;
     font-weight: 600;
     line-height: 1;
-    margin: 0;
+    margin: 0 0 30px 0;
     color: var(--cv-violet);
 }
 
@@ -101,5 +101,6 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    box-shadow: 0px 0px 20px 5px var(--cv-blue);
+    box-shadow: -5px 5px 10px 5px var(--cv-blue),
+    5px -5px 10px 5px var(--cv-violet);
 }

@@ -58,7 +58,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     overflow-x: hidden;
-    background: var(--cv-black) url(/assets/img/bg-stars.png) fixed calc(50%) 0
+    background: var(--cv-black) url(assets/img/bg-stars.png) fixed calc(50%) 0
 }
 
 .footer-center-div {
@@ -162,7 +162,7 @@ body {
     border-radius: 40px;
     background-color: var(--transparent-blue);
     margin-top: 20px;
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 0 20px;
 }
 
 .about-content-wrapper {

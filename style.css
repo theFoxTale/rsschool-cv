@@ -378,7 +378,7 @@ pre {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
-.project-container:hover button {
+.project-container:hover span {
     opacity: 1;
     transform: translateY(0);
 }

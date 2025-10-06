@@ -30,8 +30,8 @@ body {
 }
 
 pre {
-    width: 700px;
     border: 5px solid transparent;
+    padding: 0 20px;
     border-image: linear-gradient(to left top, var(--cv-blue) 10%,  transparent 30%, transparent 70%, var(--cv-violet) 90%) 1;
     display: flex;
     justify-content: center;

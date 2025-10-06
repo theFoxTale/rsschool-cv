@@ -342,19 +342,25 @@
                 </div>
 
                 <div class="code-div">
-                    <h3 class="bold-text white-text">Some code example:</h3>
+                    <h3 class="bold-text white-text">Code example:</h3>
                     <pre>
                         <code>
-$array = array(
-    'Mercedes',
-    'BMW',
-    'Toyota',
-    'Audi',
-    'Honda',
-);
+function setWelcomeListeners() {
+    slidesContainer.addEventListener('mousedown', event => dragStart(event));
+    slidesContainer.addEventListener('mouseup', event => dragEnd(event));
+    slidesContainer.addEventListener('mouseleave', event => dragEnd(event));
 
-for ($n = 0; $n &lt; count($array); $n++) {
-    echo $n + 1 . '. ' . $array[$n] . "\r\n";
+    slidesContainer.addEventListener('touchstart', event => dragStart(event.touches[0]));
+    slidesContainer.addEventListener('touchend', event => dragEnd(event.touches[0]));
+    slidesContainer.addEventListener('touchmove', event => event.preventDefault());
+
+    squaresList.forEach((squareItem, squareIndex) => {
+        squareItem.addEventListener('click', () => {
+            currentWelcomeSlide = squareIndex;
+            showSelectedSlide();
+        });
+    });
+}
                         </code>
                     </pre>
                 </div>

@@ -35,18 +35,18 @@ Now I'm interested to see what IT courses are like, which is why I'm here to lea
 
 ### Code example:
 
-```php
+```javascript
 function setWelcomeListeners() {
-    slidesContainer.addEventListener('mousedown', event => dragStart(event));
-    slidesContainer.addEventListener('mouseup', event => dragEnd(event));
-    slidesContainer.addEventListener('mouseleave', event => dragEnd(event));
+    slidesContainer.addEventListener('mousedown', event =&gt; dragStart(event));
+    slidesContainer.addEventListener('mouseup', event =&gt; dragEnd(event));
+    slidesContainer.addEventListener('mouseleave', event =&gt; dragEnd(event));
 
-    slidesContainer.addEventListener('touchstart', event => dragStart(event.touches[0]));
-    slidesContainer.addEventListener('touchend', event => dragEnd(event.touches[0]));
-    slidesContainer.addEventListener('touchmove', event => event.preventDefault());
+    slidesContainer.addEventListener('touchstart', event =&gt; dragStart(event.touches[0]));
+    slidesContainer.addEventListener('touchend', event =&gt; dragEnd(event.touches[0]));
+    slidesContainer.addEventListener('touchmove', event =&gt; event.preventDefault());
 
-    squaresList.forEach((squareItem, squareIndex) => {
-        squareItem.addEventListener('click', () => {
+    squaresList.forEach((squareItem, squareIndex) =&gt; {
+        squareItem.addEventListener('click', () =&gt; {
             currentWelcomeSlide = squareIndex;
             showSelectedSlide();
         });

@@ -257,11 +257,11 @@ pre {
 
 .nav-item {
     border-bottom: 2px solid transparent;
+    transition: border 1s ease;
 }
 
 .nav-item:hover {
     border-bottom: 2px solid var(--cv-violet);
-    transition: 0.3s ease;
 }
 
 .skills-list {

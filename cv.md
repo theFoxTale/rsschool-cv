@@ -36,21 +36,12 @@ Now I'm interested to see what IT courses are like, which is why I'm here to lea
 ### Code example:
 
 ```javascript
-function setWelcomeListeners() {
-    slidesContainer.addEventListener('mousedown', event =&gt; dragStart(event));
-    slidesContainer.addEventListener('mouseup', event =&gt; dragEnd(event));
-    slidesContainer.addEventListener('mouseleave', event =&gt; dragEnd(event));
-
-    slidesContainer.addEventListener('touchstart', event =&gt; dragStart(event.touches[0]));
-    slidesContainer.addEventListener('touchend', event =&gt; dragEnd(event.touches[0]));
-    slidesContainer.addEventListener('touchmove', event =&gt; event.preventDefault());
-
-    squaresList.forEach((squareItem, squareIndex) =&gt; {
-        squareItem.addEventListener('click', () =&gt; {
-            currentWelcomeSlide = squareIndex;
-            showSelectedSlide();
-        });
-    });
+function setActiveVideoDot() {
+  for (let dot of dotsList) {
+    dot.classList.remove('video-active');
+  }
+  const dotIndex = videoElementsList[currentVideoStep];
+  dotsList[dotIndex].classList.add('video-active');
 }
 ```
 

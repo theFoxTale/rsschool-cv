@@ -30,8 +30,8 @@ body {
 }
 
 pre {
-    width: 700px;
     border: 5px solid transparent;
+    padding: 0 20px;
     border-image: linear-gradient(to left top, var(--cv-blue) 10%,  transparent 30%, transparent 70%, var(--cv-violet) 90%) 1;
     display: flex;
     justify-content: center;
@@ -257,11 +257,11 @@ pre {
 
 .nav-item {
     border-bottom: 2px solid transparent;
+    transition: border 1s ease;
 }
 
 .nav-item:hover {
     border-bottom: 2px solid var(--cv-violet);
-    transition: 0.3s ease;
 }
 
 .skills-list {
@@ -522,6 +522,10 @@ pre {
     width: var(--ring-radius);
     height: var(--ring-radius);
 }
+
+.p-13 { --p: 13; }
+.p-75 { --p: 75; }
+.p-98 { --p: 98; }
 
 .progress-ring {
     --v:calc( ((18/5) * var(--p) - 90)*1deg);

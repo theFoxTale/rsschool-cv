@@ -308,7 +308,7 @@
 
             <section class="main-section" id="code_example">
                 <div class="label-background">
-                    <h2 class="main-section-label">PROJECTS & CODE EXAMPLES</h2>
+                    <h2 class="main-section-label">PROJECTS &amp; CODE EXAMPLES</h2>
                 </div>
 
                 <h3 class="bold-text white-text">Favorite projects:</h3>
@@ -342,19 +342,25 @@
                 </div>
 
                 <div class="code-div">
-                    <h3 class="bold-text white-text">Some code example:</h3>
+                    <h3 class="bold-text white-text">Code example:</h3>
                     <pre>
                         <code>
-$array = array(
-    'Mercedes',
-    'BMW',
-    'Toyota',
-    'Audi',
-    'Honda',
-);
+function setWelcomeListeners() {
+    slidesContainer.addEventListener('mousedown', event => dragStart(event));
+    slidesContainer.addEventListener('mouseup', event => dragEnd(event));
+    slidesContainer.addEventListener('mouseleave', event => dragEnd(event));
 
-for ($n = 0; $n &lt; count($array); $n++) {
-    echo $n + 1 . '. ' . $array[$n] . "\r\n";
+    slidesContainer.addEventListener('touchstart', event => dragStart(event.touches[0]));
+    slidesContainer.addEventListener('touchend', event => dragEnd(event.touches[0]));
+    slidesContainer.addEventListener('touchmove', event => event.preventDefault());
+
+    squaresList.forEach((squareItem, squareIndex) => {
+        squareItem.addEventListener('click', () => {
+            currentWelcomeSlide = squareIndex;
+            showSelectedSlide();
+        });
+    });
+}
                         </code>
                     </pre>
                 </div>
@@ -368,27 +374,27 @@ for ($n = 0; $n &lt; count($array); $n++) {
                 <div class="languages-content">
                     <div class="language-item">
                         <div class="language-name">Russian</div>
-                        <div class="ring-container">
+                        <div class="ring-container p-98">
                             <div class="progress-text">98%</div>
-                            <div class="progress-ring" style="--p:98;"></div>
+                            <div class="progress-ring"></div>
                         </div>
                         <div class="language-description">Native speaker</div>
                     </div>
 
                     <div class="language-item">
                         <div class="language-name">Chinese</div>
-                        <div class="ring-container">
+                        <div class="ring-container p-13">
                             <div class="progress-text">13%</div>
-                            <div class="progress-ring" style="--p:13;"></div>
+                            <div class="progress-ring"></div>
                         </div>
                         <div class="language-description">Just start learning</div>
                     </div>
 
                     <div class="language-item">
                         <div class="language-name">English</div>
-                        <div class="ring-container">
-                            <div class="progress-text">98%</div>
-                            <div class="progress-ring" style="--p:75;"></div>
+                        <div class="ring-container p-75">
+                            <div class="progress-text">75%</div>
+                            <div class="progress-ring"></div>
                         </div>
                         <div class="language-description">Watch films and read literature</div>
                     </div>

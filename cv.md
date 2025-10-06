@@ -36,16 +36,21 @@ Now I'm interested to see what IT courses are like, which is why I'm here to lea
 ### Code example:
 
 ```php
-$array = array(
-    'Mercedes',
-    'BMW',
-    'Toyota',
-    'Audi',
-    'Honda',
-);
-  
-for ($n = 0; $n < count($array); $n++) {
-    echo $n + 1 . '. ' . $array[$n] . "\r\n";
+function setWelcomeListeners() {
+    slidesContainer.addEventListener('mousedown', event => dragStart(event));
+    slidesContainer.addEventListener('mouseup', event => dragEnd(event));
+    slidesContainer.addEventListener('mouseleave', event => dragEnd(event));
+
+    slidesContainer.addEventListener('touchstart', event => dragStart(event.touches[0]));
+    slidesContainer.addEventListener('touchend', event => dragEnd(event.touches[0]));
+    slidesContainer.addEventListener('touchmove', event => event.preventDefault());
+
+    squaresList.forEach((squareItem, squareIndex) => {
+        squareItem.addEventListener('click', () => {
+            currentWelcomeSlide = squareIndex;
+            showSelectedSlide();
+        });
+    });
 }
 ```
 

@@ -345,21 +345,12 @@
                     <h3 class="bold-text white-text">Code example:</h3>
                     <pre>
                         <code>
-function setWelcomeListeners() {
-    slidesContainer.addEventListener('mousedown', event =&gt dragStart(event));
-    slidesContainer.addEventListener('mouseup', event =&gt dragEnd(event));
-    slidesContainer.addEventListener('mouseleave', event =&gt dragEnd(event));
-
-    slidesContainer.addEventListener('touchstart', event =&gt dragStart(event.touches[0]));
-    slidesContainer.addEventListener('touchend', event =&gt dragEnd(event.touches[0]));
-    slidesContainer.addEventListener('touchmove', event =&gt event.preventDefault());
-
-    squaresList.forEach((squareItem, squareIndex) =&gt {
-        squareItem.addEventListener('click', () =&gt {
-            currentWelcomeSlide = squareIndex;
-            showSelectedSlide();
-        });
-    });
+function setActiveVideoDot() {
+  for (let dot of dotsList) {
+    dot.classList.remove('video-active');
+  }
+  const dotIndex = videoElementsList[currentVideoStep];
+  dotsList[dotIndex].classList.add('video-active');
 }
                         </code>
                     </pre>

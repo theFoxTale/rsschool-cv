@@ -523,6 +523,10 @@ pre {
     height: var(--ring-radius);
 }
 
+.p-13 { --p: 13; }
+.p-75 { --p: 75; }
+.p-98 { --p: 98; }
+
 .progress-ring {
     --v:calc( ((18/5) * var(--p) - 90)*1deg);
 

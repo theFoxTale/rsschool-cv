@@ -1,2 +1,3 @@
 # rsschool-cv
-CV#1. Markdown &amp; Git
+- [CV on Markdown](https://thefoxtale.github.io/rsschool-cv/cv)
+- [CV on HTML &amp; CSS](https://thefoxtale.github.io/rsschool-cv/)

@@ -360,22 +360,32 @@ pre {
 
 .social-icon--linkedin {
     --social-icon: url("assets/contacts/linkedin.svg");
-    transform: rotate(24deg) translate(120px) rotate(-24deg);
+    transform: rotate(32deg) translate(129px) rotate(-32deg);
 }
 
 .social-icon--linkedin:hover,
 .social-icon--linkedin:focus-visible {
-    transform: rotate(24deg) translate(120px) rotate(-24deg) scale(1.06);
+    transform: rotate(32deg) translate(129px) rotate(-32deg) scale(1.06);
+}
+
+.social-icon--github {
+    --social-icon: url("assets/contacts/github.svg");
+    transform: rotate(64deg) translate(125px) rotate(-64deg);
+}
+
+.social-icon--github:hover,
+.social-icon--github:focus-visible {
+    transform: rotate(64deg) translate(125px) rotate(-64deg) scale(1.06);
 }
 
 .social-icon--email {
     --social-icon: url("assets/contacts/email.svg");
-    transform: rotate(51deg) translate(110px) rotate(-51deg);
+    transform: rotate(96deg) translate(130px) rotate(-96deg);
 }
 
 .social-icon--email:hover,
 .social-icon--email:focus-visible {
-    transform: rotate(51deg) translate(110px) rotate(-51deg) scale(1.06);
+    transform: rotate(96deg) translate(130px) rotate(-96deg) scale(1.06);
 }
 
 .nav {

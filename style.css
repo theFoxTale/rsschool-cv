@@ -300,42 +300,82 @@ pre {
     left: 0;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     pointer-events: none;
     list-style: none;
 }
 
 .social-icon {
+    --social-icon: none;
+
     position: absolute;
     top: 50%;
     left: 50%;
     width: 48px;
     height: 48px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    color: var(--cv-gray);
+    background-color: var(--cv-black);
     box-shadow: 0 0 10px var(--shadow-soft);
     pointer-events: auto;
-    transition: transform 0.3s ease;
+    transition:
+        color 1s ease,
+        background-color 1s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
-.telegram-icon {
+.social-icon__glyph {
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    mask: var(--social-icon) center / contain no-repeat;
+    -webkit-mask: var(--social-icon) center / contain no-repeat;
+}
+
+.social-icon:hover,
+.social-icon:focus-visible {
+    color: var(--cv-blue);
+    box-shadow: 0 0 14px var(--transparent-blue);
+}
+
+.social-icon:focus-visible {
+    outline: 3px solid var(--cv-blue);
+    outline-offset: 3px;
+}
+
+.social-icon--telegram {
+    --social-icon: url("assets/contacts/telegram.svg");
     transform: translate(130px);
 }
-.telegram-icon:hover {
-    content: url("assets/contacts/telegram_blue.png");
+
+.social-icon--telegram:hover,
+.social-icon--telegram:focus-visible {
+    transform: translate(130px) scale(1.06);
 }
 
-.linkedin-icon {
+.social-icon--linkedin {
+    --social-icon: url("assets/contacts/linkedin.svg");
     transform: rotate(24deg) translate(120px) rotate(-24deg);
 }
-.linkedin-icon:hover {
-    content: url("assets/contacts/linkedin_blue.png");
+
+.social-icon--linkedin:hover,
+.social-icon--linkedin:focus-visible {
+    transform: rotate(24deg) translate(120px) rotate(-24deg) scale(1.06);
 }
 
-.email-icon {
+.social-icon--email {
+    --social-icon: url("assets/contacts/email.svg");
     transform: rotate(51deg) translate(110px) rotate(-51deg);
 }
-.email-icon:hover {
-    content: url("assets/contacts/new-message_blue.png");
+
+.social-icon--email:hover,
+.social-icon--email:focus-visible {
+    transform: rotate(51deg) translate(110px) rotate(-51deg) scale(1.06);
 }
 
 .nav {

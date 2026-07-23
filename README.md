@@ -56,10 +56,24 @@ npx serve .
 
 Then visit the URL printed in the terminal (usually `http://localhost:3000`).
 
+## Deployment (GitHub Actions → Pages)
+
+Every push (including merges) to `main` triggers [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml), which publishes the site to GitHub Pages.
+
+### One-time repository setup
+
+1. Open **Settings → Pages**
+2. Under **Build and deployment → Source**, choose **GitHub Actions** (not “Deploy from a branch”)
+3. Merge this workflow into `main`, or run it once via **Actions → Deploy to GitHub Pages → Run workflow**
+
+After that, the live site updates automatically on each merge to `main`:  
+https://thefoxtale.github.io/rsschool-cv/
+
 ## Project structure
 
 ```text
 rsschool-cv/
+├── .github/workflows/  # CI: deploy to GitHub Pages
 ├── index.html          # HTML/CSS CV
 ├── style.css           # Styles
 ├── cv.md               # Markdown CV

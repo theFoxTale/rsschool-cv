@@ -9,88 +9,123 @@
 </head>
 
 <body class="main-page">
-    <header id="top">
-        <div class="content-container cv-header">
-            <section class="user-info">
-                <h1 class="for_surname">MAKARENKO</h1>
-                <h2 class="for_name">ANNA</h2>
-                <p class="for_position">Full Stack Developer</p>
-            </section>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-            <section class="about-section" id="about">
-                <div>
-                    <h2 class="about-section-label">ABOUT ME</h2>
+    <header id="top">
+        <div class="content-container">
+            <div class="cv-header">
+                <div class="user-info">
+                    <h1 class="identity">
+                        <span class="for_surname">MAKARENKO</span>
+                        <span class="for_name">ANNA</span>
+                    </h1>
+                    <p class="for_position">Full Stack Developer</p>
                 </div>
 
                 <div class="about-content-wrapper">
-                    <img alt="cv photo" src="assets/img/my_photo.jpg" class="cv-photo">
+                    <img
+                        class="cv-photo"
+                        src="assets/img/my_photo.jpg"
+                        alt="Portrait of Anna Makarenko"
+                        width="300"
+                        height="300"
+                    >
 
-                        <ul class="social-icons">
-                            <li>
-                                <a href="https://t.me/annie_in_life" class="social-icon telegram-icon" target="_blank">
-                                    <img src="assets/contacts/telegram_gray.png" alt="Telegram">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/анна-макаренко-369795a3" class="social-icon linkedin-icon" target="_blank">
-                                    <img src="assets/contacts/linkedin_gray.png" alt="LinkedIn">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:makarenkoanna@yandex.ru" class="social-icon email-icon" target="_blank">
-                                    <img src="assets/contacts/new-message_gray.png" alt="Email">
-                                </a>
-                            </li>
-                        </ul>
+                    <ul class="social-icons">
+                        <li>
+                            <a
+                                href="https://t.me/annie_in_life"
+                                class="social-icon telegram-icon"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Telegram: @annie_in_life"
+                            >
+                                <img src="assets/contacts/telegram_gray.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/анна-макаренко-369795a3"
+                                class="social-icon linkedin-icon"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn profile"
+                            >
+                                <img src="assets/contacts/linkedin_gray.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="mailto:makarenkoanna@yandex.ru"
+                                class="social-icon email-icon"
+                                aria-label="Email: makarenkoanna@yandex.ru"
+                            >
+                                <img src="assets/contacts/new-message_gray.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="content-container cv-main">
+            <section class="about-section main-section" id="about" aria-labelledby="about-title">
+                <h2 class="about-section-label" id="about-title">ABOUT ME</h2>
 
                 <p class="about-text">Once, I dropped by my friends' workplace to borrow a tent. While we were sitting there, drinking tea and chatting, I accidentally went through a job interview with their company, and they offered me a position as a junior programmer. That's how my career began so unexpectedly.</p>
                 <p class="about-text">I'm cheerful, resourceful, love learning, and am good at finding information online. Throughout my work, I've always taught myself a huge amount, but I never received any formal programming training. That's how I grew into a middle fullstack developer and the lead of a small team.</p>
                 <p class="about-text">Now I'm interested to see what IT courses are like, which is why I'm here to learn.</p>
             </section>
-        </div>
-    </header>
 
-    <main>
-        <div class="content-container cv-main">
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#code_example" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
-                </ul>
-            </nav>
-
-            <section class="main-section" id="education">
+            <section class="main-section" id="education" aria-labelledby="education-title">
                 <div class="label-background">
-                    <h2 class="main-section-label">EDUCATION</h2>
+                    <h2 class="main-section-label" id="education-title">EDUCATION</h2>
                 </div>
-                <div class="education-container">
-                    <p class="year-layout bold-text">2010</p>
+
+                <article class="education-container">
+                    <p class="year-layout bold-text">
+                        <time datetime="2010">2010</time>
+                    </p>
                     <div class="education-details">
-                        <span class="bold-text white-text">Bauman Moscow State Technical University (BMSTU)</span>
-                        <span>Biomedical Technologies (BMT)</span>
+                        <h3 class="bold-text white-text education-title">Bauman Moscow State Technical University (BMSTU)</h3>
+                        <p class="education-program">Biomedical Technologies (BMT)</p>
                     </div>
-                </div>
+                </article>
             </section>
 
-            <section class="main-section" id="experience">
+            <section class="main-section" id="experience" aria-labelledby="experience-title">
                 <div class="label-background">
-                    <h2 class="main-section-label">EXPERIENCE</h2>
+                    <h2 class="main-section-label" id="experience-title">EXPERIENCE</h2>
                 </div>
 
                 <div class="experience-columns">
                     <div class="linear-gradient-border">
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">01.2025</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2025-01">01.2025</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">OOO PART KOM</span> - Web Programmer
+                                <h3 class="bold-text white-text work-name-div">OOO PART KOM</h3>
+                                <span class="job-role">Web Programmer</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">present</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2026-07">present</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -98,16 +133,21 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">09.2019</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2019-09">09.2019</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">RUT (MIIT)</span> - Lead Software Engineer
+                                <h3 class="bold-text white-text work-name-div">RUT (MIIT)</h3>
+                                <span class="job-role">Lead Software Engineer</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">12.2024</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2024-12">12.2024</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -115,16 +155,21 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">11.2018</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2018-11">11.2018</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">RUT (MIIT)</span> - Engineer 1st Category
+                                <h3 class="bold-text white-text work-name-div">RUT (MIIT)</h3>
+                                <span class="job-role">Engineer 1st Category</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">09.2019</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2019-09">09.2019</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -132,16 +177,21 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">11.2014</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2014-11">11.2014</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">RUT (MIIT)</span> - Fullstack Developer
+                                <h3 class="bold-text white-text work-name-div">RUT (MIIT)</h3>
+                                <span class="job-role">Fullstack Developer</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">11.2018</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2018-11">11.2018</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -149,18 +199,23 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
                     </div>
 
                     <div>
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">03.2011</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2011-03">03.2011</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">ZAO NPF AZ</span> - Research Scientist
+                                <h3 class="bold-text white-text work-name-div">ZAO NPF AZ</h3>
+                                <span class="job-role">Research Scientist</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">11.2014</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2014-11">11.2014</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -168,16 +223,21 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">10.2010</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2010-10">10.2010</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">LLC "Pari Sinergiya v Meditsine"</span> - Product Manager
+                                <h3 class="bold-text white-text work-name-div">LLC "Pari Sinergiya v Meditsine"</h3>
+                                <span class="job-role">Product Manager</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">01.2011</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2011-01">01.2011</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -185,16 +245,21 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">04.2010</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2010-04">04.2010</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">ZAO "OKB SAPR"</span> - Hardware-Software Security Engineer
+                                <h3 class="bold-text white-text work-name-div">ZAO "OKB SAPR"</h3>
+                                <span class="job-role">Hardware-Software Security Engineer</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">11.2010</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2010-11">11.2010</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -202,16 +267,21 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="experience-container">
-                            <p class="year-layout bold-text two-columns">03.2008</p>
+                        <article class="experience-container">
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2008-03">03.2008</time>
+                            </p>
                             <div class="two-rows">
-                                <span class="bold-text white-text work-name-div">Altonika</span> - Medical Equipment Department Engineer
+                                <h3 class="bold-text white-text work-name-div">Altonika</h3>
+                                <span class="job-role">Medical Equipment Department Engineer</span>
                             </div>
-                            <div class="border-div">&nbsp;</div>
-                            <div></div>
-                            <p class="year-layout bold-text two-columns">04.2010</p>
+                            <div class="border-div" aria-hidden="true"></div>
+                            <div class="experience-spacer" aria-hidden="true"></div>
+                            <p class="year-layout bold-text two-columns">
+                                <time datetime="2010-04">04.2010</time>
+                            </p>
                             <div class="work-name-div">
                                 <ul class="work-list">
                                     <li>My work description</li>
@@ -219,26 +289,22 @@
                                     <li>My work description</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            <section class="main-section" id="skills">
+            <section class="main-section" id="skills" aria-labelledby="skills-title">
                 <div class="label-background">
-                    <h2 class="main-section-label">SKILLS</h2>
+                    <h2 class="main-section-label" id="skills-title">SKILLS</h2>
                 </div>
 
                 <ul class="skills-list">
                     <li>
-                        <div class="skill-list-header">
-                            <span>Frontend</span>
-                        </div>
+                        <h3 class="skill-list-header">Frontend</h3>
                         <div class="progress-container">
                             <div class="progress-bar">
-                                <div class="progress-fill div-65">
-                                    65%
-                                </div>
+                                <div class="progress-fill div-65">65%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -252,14 +318,10 @@
                     </li>
 
                     <li>
-                        <div class="skill-list-header">
-                            <span>Backend</span>
-                        </div>
+                        <h3 class="skill-list-header">Backend</h3>
                         <div class="progress-container">
                             <div class="progress-bar">
-                                <div class="progress-fill div-93">
-                                    93%
-                                </div>
+                                <div class="progress-fill div-93">93%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -268,15 +330,12 @@
                             <li>Python</li>
                         </ul>
                     </li>
+
                     <li>
-                        <div class="skill-list-header">
-                            <span>Databases</span>
-                        </div>
+                        <h3 class="skill-list-header">Databases</h3>
                         <div class="progress-container">
                             <div class="progress-bar">
-                                <div class="progress-fill div-70">
-                                    70%
-                                </div>
+                                <div class="progress-fill div-70">70%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -285,15 +344,12 @@
                             <li>MSSQL</li>
                         </ul>
                     </li>
+
                     <li>
-                        <div class="skill-list-header">
-                            <span>Additional</span>
-                        </div>
+                        <h3 class="skill-list-header">Additional</h3>
                         <div class="progress-container">
                             <div class="progress-bar">
-                                <div class="progress-fill div-88">
-                                    88%
-                                </div>
+                                <div class="progress-fill div-88">88%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -306,90 +362,113 @@
                 </ul>
             </section>
 
-            <section class="main-section" id="code_example">
+            <section class="main-section" id="projects" aria-labelledby="projects-title">
                 <div class="label-background">
-                    <h2 class="main-section-label">PROJECTS &amp; CODE EXAMPLES</h2>
+                    <h2 class="main-section-label" id="projects-title">PROJECTS &amp; CODE EXAMPLES</h2>
                 </div>
 
-                <h3 class="bold-text white-text">Favorite projects:</h3>
-                <div class="project-div">
-                    <div class="project-container">
-                        <a href="https://github.com/theFoxTale/the-fox-tales-bot" target="_blank">
-                            <img alt="first project" src="./assets/projects/wood.jpg" class="project-image">
+                <h3 class="bold-text white-text">Favorite projects</h3>
+                <ul class="project-div">
+                    <li class="project-container">
+                        <a
+                            href="https://github.com/theFoxTale/the-fox-tales-bot"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="The Fox Tales Bot — view source on GitHub"
+                        >
+                            <img
+                                class="project-image"
+                                src="./assets/projects/wood.jpg"
+                                alt="Preview of The Fox Tales Telegram bot project"
+                            >
                             <div class="image-overlay">
                                 <span class="go-to-code-button">Go to code</span>
                             </div>
                         </a>
-                    </div>
+                    </li>
 
-                    <div class="project-container">
-                        <a href="https://github.com/theFoxTale/rsschool-cv" target="_blank">
-                            <img alt="second project" src="./assets/projects/goods.jpg" class="project-image">
+                    <li class="project-container">
+                        <a
+                            href="https://github.com/theFoxTale/rsschool-cv"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="RS School CV — view source on GitHub"
+                        >
+                            <img
+                                class="project-image"
+                                src="./assets/projects/goods.jpg"
+                                alt="Preview of the RS School CV project"
+                            >
                             <div class="image-overlay">
                                 <span class="go-to-code-button">Go to code</span>
                             </div>
                         </a>
-                    </div>
+                    </li>
 
-                    <div class="project-container">
-                        <a href="https://github.com/theFoxTale/learn-data-science" target="_blank">
-                            <img alt="second project" src="./assets/projects/samchuk.jpg" class="project-image">
+                    <li class="project-container">
+                        <a
+                            href="https://github.com/theFoxTale/learn-data-science"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Learn Data Science — view source on GitHub"
+                        >
+                            <img
+                                class="project-image"
+                                src="./assets/projects/samchuk.jpg"
+                                alt="Preview of the Learn Data Science project"
+                            >
                             <div class="image-overlay">
                                 <span class="go-to-code-button">Go to code</span>
                             </div>
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
 
                 <div class="code-div">
-                    <h3 class="bold-text white-text">Code example:</h3>
-                    <pre>
-                        <code>
-function setActiveVideoDot() {
+                    <h3 class="bold-text white-text">Code example</h3>
+                    <pre><code>function setActiveVideoDot() {
   for (let dot of dotsList) {
     dot.classList.remove('video-active');
   }
   const dotIndex = videoElementsList[currentVideoStep];
   dotsList[dotIndex].classList.add('video-active');
-}
-                        </code>
-                    </pre>
+}</code></pre>
                 </div>
             </section>
 
-            <section class="main-section" id="languages">
+            <section class="main-section" id="languages" aria-labelledby="languages-title">
                 <div class="label-background">
-                    <h2 class="main-section-label">LANGUAGES</h2>
+                    <h2 class="main-section-label" id="languages-title">LANGUAGES</h2>
                 </div>
 
-                <div class="languages-content">
-                    <div class="language-item">
-                        <div class="language-name">Russian</div>
+                <ul class="languages-content">
+                    <li class="language-item">
+                        <h3 class="language-name">Russian</h3>
                         <div class="ring-container p-98">
                             <div class="progress-text">98%</div>
-                            <div class="progress-ring"></div>
+                            <div class="progress-ring" aria-hidden="true"></div>
                         </div>
-                        <div class="language-description">Native speaker</div>
-                    </div>
+                        <p class="language-description">Native speaker</p>
+                    </li>
 
-                    <div class="language-item">
-                        <div class="language-name">Chinese</div>
+                    <li class="language-item">
+                        <h3 class="language-name">Chinese</h3>
                         <div class="ring-container p-13">
                             <div class="progress-text">13%</div>
-                            <div class="progress-ring"></div>
+                            <div class="progress-ring" aria-hidden="true"></div>
                         </div>
-                        <div class="language-description">Just start learning</div>
-                    </div>
+                        <p class="language-description">Just start learning</p>
+                    </li>
 
-                    <div class="language-item">
-                        <div class="language-name">English</div>
+                    <li class="language-item">
+                        <h3 class="language-name">English</h3>
                         <div class="ring-container p-75">
                             <div class="progress-text">75%</div>
-                            <div class="progress-ring"></div>
+                            <div class="progress-ring" aria-hidden="true"></div>
                         </div>
-                        <div class="language-description">Watch films and read literature</div>
-                    </div>
-                </div>
+                        <p class="language-description">Watch films and read literature</p>
+                    </li>
+                </ul>
             </section>
         </div>
     </main>
@@ -397,27 +476,43 @@ function setActiveVideoDot() {
     <footer>
         <div class="content-container cv-footer">
             <div>
-                <a href="https://github.com/theFoxTale" target="_blank" class="hidden-link flex-div">
-                    <img alt="gitlab logo" src="assets/img/github-logo.png" class="github-image">
+                <a
+                    href="https://github.com/theFoxTale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hidden-link flex-div"
+                >
+                    <img alt="GitHub logo" src="assets/img/github-logo.png" class="github-image" width="30" height="30">
                     <span class="bold-text">My GitHub</span>
                 </a>
             </div>
 
             <div class="footer-center-div">
-                <a href="https://rs.school/courses/javascript-ru" target="_blank" class="hidden-link flex-div">
+                <a
+                    href="https://rs.school/courses/javascript-ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hidden-link flex-div"
+                >
                     <span class="bold-text">Made with love in</span>
-                    <img alt="rs-logo" src="assets/img/rs-school-logo.png" class="rs-image">
+                    <img alt="RS School logo" src="assets/img/rs-school-logo.png" class="rs-image" height="60">
                     <span class="bold-text">in JS preschool course</span>
                 </a>
             </div>
 
             <div class="flex-div">
-                <p class="bold-text">©2025 by Anna Makarenko</p>
+                <p class="bold-text"><time datetime="2025">©2025</time> by Anna Makarenko</p>
             </div>
         </div>
 
-        <a href="#top" id="scroll-button" class="scroll-top" title="Прокрутить вверх">
-            <img alt="to top image" src="assets/img/up-arrow.png" class="scroll-top-image">
+        <a
+            href="#top"
+            id="scroll-button"
+            class="scroll-top"
+            aria-label="Back to top"
+            title="Back to top"
+        >
+            <img alt="" src="assets/img/up-arrow.png" class="scroll-top-image" width="40" height="40">
         </a>
     </footer>
 </body>

@@ -523,6 +523,7 @@ pre {
 }
 
 .progress-fill {
+    width: var(--level, 0%);
     height: 100%;
     background: linear-gradient(to right, var(--cv-violet), var(--cv-blue));
     border-radius: 15px;
@@ -532,22 +533,6 @@ pre {
     color: var(--text-on-fill);
     font-size: 14px;
     padding-right: 5px;
-}
-
-.div-65 {
-    width: 65%;
-}
-
-.div-93 {
-    width: 93%;
-}
-
-.div-70 {
-    width: 70%;
-}
-
-.div-88 {
-    width: 88%;
 }
 
 .experience-columns {

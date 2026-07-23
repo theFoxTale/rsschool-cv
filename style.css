@@ -63,14 +63,33 @@
 }
 
 :root {
+    /* Core palette */
     --cv-black: #0a0516;
     --cv-blue: #1e5da5;
+    --cv-blue-rgb: 30, 93, 165;
     --cv-gray: #a2a2a2;
     --cv-violet: #5c4380;
+    --cv-violet-rgb: 92, 67, 128;
     --near-white: #d5d5d5;
-    --transparent-blue: rgba(30, 93, 165, 0.5);
-    --transparent-violet: rgba(92, 67, 128, 0.5);
-    --transparent-white: rgba(255, 255, 255, 0.8);
+    --white: #ffffff;
+    --black: #000000;
+    --white-rgb: 255, 255, 255;
+    --black-rgb: 0, 0, 0;
+
+    /* Derived / alpha variants */
+    --transparent-blue: rgba(var(--cv-blue-rgb), 0.5);
+    --transparent-violet: rgba(var(--cv-violet-rgb), 0.5);
+    --transparent-white: rgba(var(--white-rgb), 0.8);
+    --overlay-white: rgba(var(--white-rgb), 0);
+    --overlay-white-hover: rgba(var(--white-rgb), 0.7);
+    --shadow-soft: rgba(var(--black-rgb), 0.5);
+    --shadow-strong: rgba(var(--black-rgb), 0.6);
+
+    /* Semantic text */
+    --text-muted: var(--cv-gray);
+    --text-strong: var(--near-white);
+    --text-on-accent: var(--white);
+    --text-on-fill: var(--cv-black);
 
     --ring-radius: 200px;
 
@@ -92,7 +111,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
-    color: gray;
+    color: var(--text-muted);
     min-height: 100vh;
     margin: 0; padding: 0;
 }
@@ -117,7 +136,7 @@ pre {
     z-index: 10000;
     padding: 12px 16px;
     background: var(--cv-blue);
-    color: #fff;
+    color: var(--text-on-accent);
     text-decoration: none;
     font-weight: 700;
 }
@@ -132,7 +151,7 @@ pre {
 }
 
 .white-text {
-    color: var(--near-white);
+    color: var(--text-strong);
 }
 
 .identity {
@@ -226,7 +245,7 @@ pre {
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 24px;
-    color: var(--near-white);
+    color: var(--text-strong);
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -236,7 +255,7 @@ pre {
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 24px;
-    color: white;
+    color: var(--text-on-accent);
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -282,7 +301,7 @@ pre {
 }
 
 .about-text {
-    color: var(--cv-gray);
+    color: var(--text-muted);
 }
 
 .social-icons {
@@ -303,7 +322,7 @@ pre {
     height: 48px;
     display: flex;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px var(--shadow-soft);
     pointer-events: auto;
     transition: transform 0.3s ease;
 }
@@ -396,7 +415,7 @@ pre {
     padding-left: 21px;
     font-weight: normal;
     font-size: 18px;
-    color: gray;
+    color: var(--text-muted);
 }
 
 .skill-list-header {
@@ -411,7 +430,7 @@ pre {
 
 .hidden-link {
     text-decoration: none;
-    color: gray;
+    color: var(--text-muted);
 }
 .hidden-link:hover {
     color: var(--cv-blue);
@@ -439,7 +458,7 @@ pre {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: var(--overlay-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -447,7 +466,7 @@ pre {
 }
 
 .project-container:hover .image-overlay {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--overlay-white-hover);
 }
 
 .project-container {
@@ -475,14 +494,14 @@ pre {
 
 .go-to-code-button {
     padding: 10px 20px;
-    color: white;
+    color: var(--text-on-accent);
     background-color: var(--cv-blue);
     border: none;
     border-radius: 20px;
     opacity: 0;
     transition: all 2s ease;
     font-size: 24px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 25px var(--shadow-strong);
 }
 
 .project-container:hover span {
@@ -510,7 +529,7 @@ pre {
     transition: width 0.5s ease-in-out;
     position: relative;
     text-align: right;
-    color: var(--cv-black);
+    color: var(--text-on-fill);
     font-size: 14px;
     padding-right: 5px;
 }
@@ -564,7 +583,7 @@ pre {
 .year-layout {
     background-color: var(--transparent-violet);
     border-radius: 20px;
-    color: var(--near-white);
+    color: var(--text-strong);
     padding: 6px 12px;
     align-self: start;
     width: max-content;
@@ -677,8 +696,8 @@ pre {
             linear-gradient(var(--v), transparent 50%, var(--cv-blue)        0) 0/min(100%,(var(--p) - 50)*100%),
             linear-gradient(to right, var(--cv-gray) 50%, var(--cv-blue) 0);
     mask:
-            linear-gradient(to right, white, white) content-box,
-            linear-gradient(to right, white, white);
+            linear-gradient(to right, var(--white), var(--white)) content-box,
+            linear-gradient(to right, var(--white), var(--white));
     mask-composite: exclude;
 }
 
@@ -687,7 +706,7 @@ pre {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--cv-gray);
+    color: var(--text-muted);
     font-size: 36px;
     font-weight: bold;
 }

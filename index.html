@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV of Anna Demyanovich — Full Stack Developer. Skills, experience, projects, and contacts.">
     <link rel="icon" type="image/png" href="assets/img/resume-and-cv.png">
     <link rel="preload" href="assets/fonts/outfit/outfit-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -315,10 +316,17 @@
 
                 <ul class="skills-list">
                     <li>
-                        <h3 class="skill-list-header">Frontend</h3>
+                        <h3 class="skill-list-header" id="skill-frontend">Frontend</h3>
                         <div class="progress-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="--level: 65%">65%</div>
+                            <div
+                                class="progress-bar"
+                                role="meter"
+                                aria-labelledby="skill-frontend"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="65"
+                            >
+                                <div class="progress-fill" style="--level: 65%" aria-hidden="true">65%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -332,10 +340,17 @@
                     </li>
 
                     <li>
-                        <h3 class="skill-list-header">Backend</h3>
+                        <h3 class="skill-list-header" id="skill-backend">Backend</h3>
                         <div class="progress-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="--level: 93%">93%</div>
+                            <div
+                                class="progress-bar"
+                                role="meter"
+                                aria-labelledby="skill-backend"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="93"
+                            >
+                                <div class="progress-fill" style="--level: 93%" aria-hidden="true">93%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -346,10 +361,17 @@
                     </li>
 
                     <li>
-                        <h3 class="skill-list-header">Databases</h3>
+                        <h3 class="skill-list-header" id="skill-databases">Databases</h3>
                         <div class="progress-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="--level: 70%">70%</div>
+                            <div
+                                class="progress-bar"
+                                role="meter"
+                                aria-labelledby="skill-databases"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="70"
+                            >
+                                <div class="progress-fill" style="--level: 70%" aria-hidden="true">70%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -360,10 +382,17 @@
                     </li>
 
                     <li>
-                        <h3 class="skill-list-header">Additional</h3>
+                        <h3 class="skill-list-header" id="skill-additional">Additional</h3>
                         <div class="progress-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="--level: 88%">88%</div>
+                            <div
+                                class="progress-bar"
+                                role="meter"
+                                aria-labelledby="skill-additional"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="88"
+                            >
+                                <div class="progress-fill" style="--level: 88%" aria-hidden="true">88%</div>
                             </div>
                         </div>
                         <ul class="dotted-list">
@@ -386,64 +415,73 @@
                     <li class="project-container">
                         <a
                             href="https://github.com/theFoxTale/the-fox-tales-bot"
+                            class="project-card"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="The Fox Tales Bot — view source on GitHub"
                         >
-                            <img
-                                class="project-image"
-                                src="./assets/projects/wood.webp"
-                                alt="Preview of The Fox Tales Telegram bot project"
-                                loading="lazy"
-                            >
-                            <div class="image-overlay">
-                                <span class="go-to-code-button">Go to code</span>
-                            </div>
+                            <span class="project-card__media">
+                                <img
+                                    class="project-image"
+                                    src="./assets/projects/wood.webp"
+                                    alt=""
+                                    loading="lazy"
+                                >
+                                <span class="image-overlay">
+                                    <span class="go-to-code-button">Go to code</span>
+                                </span>
+                            </span>
+                            <span class="project-card__title">The Fox Tales Bot</span>
                         </a>
                     </li>
 
                     <li class="project-container">
                         <a
                             href="https://github.com/theFoxTale/rsschool-cv"
+                            class="project-card"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="RS School CV — view source on GitHub"
                         >
-                            <img
-                                class="project-image"
-                                src="./assets/projects/goods.webp"
-                                alt="Preview of the RS School CV project"
-                                loading="lazy"
-                            >
-                            <div class="image-overlay">
-                                <span class="go-to-code-button">Go to code</span>
-                            </div>
+                            <span class="project-card__media">
+                                <img
+                                    class="project-image"
+                                    src="./assets/projects/goods.webp"
+                                    alt=""
+                                    loading="lazy"
+                                >
+                                <span class="image-overlay">
+                                    <span class="go-to-code-button">Go to code</span>
+                                </span>
+                            </span>
+                            <span class="project-card__title">RS School CV</span>
                         </a>
                     </li>
 
                     <li class="project-container">
                         <a
                             href="https://github.com/theFoxTale/learn-data-science"
+                            class="project-card"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Learn Data Science — view source on GitHub"
                         >
-                            <img
-                                class="project-image"
-                                src="./assets/projects/samchuk.webp"
-                                alt="Preview of the Learn Data Science project"
-                                loading="lazy"
-                            >
-                            <div class="image-overlay">
-                                <span class="go-to-code-button">Go to code</span>
-                            </div>
+                            <span class="project-card__media">
+                                <img
+                                    class="project-image"
+                                    src="./assets/projects/samchuk.webp"
+                                    alt=""
+                                    loading="lazy"
+                                >
+                                <span class="image-overlay">
+                                    <span class="go-to-code-button">Go to code</span>
+                                </span>
+                            </span>
+                            <span class="project-card__title">Learn Data Science</span>
                         </a>
                     </li>
                 </ul>
 
                 <div class="code-div">
-                    <h3 class="bold-text white-text">Code example</h3>
-                    <pre><code>function setActiveVideoDot() {
+                    <h3 class="bold-text white-text" id="code-example-title">Code example</h3>
+                    <pre aria-labelledby="code-example-title"><code>function setActiveVideoDot() {
   for (let dot of dotsList) {
     dot.classList.remove('video-active');
   }
@@ -460,27 +498,51 @@
 
                 <ul class="languages-content">
                     <li class="language-item">
-                        <h3 class="language-name">Russian</h3>
-                        <div class="ring-container p-98">
-                            <div class="progress-text">98%</div>
+                        <h3 class="language-name" id="lang-russian">Russian</h3>
+                        <div
+                            class="ring-container p-98"
+                            role="meter"
+                            aria-labelledby="lang-russian"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="98"
+                            aria-valuetext="Native speaker"
+                        >
+                            <div class="progress-text" aria-hidden="true">98%</div>
                             <div class="progress-ring" aria-hidden="true"></div>
                         </div>
                         <p class="language-description">Native speaker</p>
                     </li>
 
                     <li class="language-item">
-                        <h3 class="language-name">Chinese</h3>
-                        <div class="ring-container p-13">
-                            <div class="progress-text">13%</div>
+                        <h3 class="language-name" id="lang-chinese">Chinese</h3>
+                        <div
+                            class="ring-container p-13"
+                            role="meter"
+                            aria-labelledby="lang-chinese"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="13"
+                            aria-valuetext="Beginner"
+                        >
+                            <div class="progress-text" aria-hidden="true">13%</div>
                             <div class="progress-ring" aria-hidden="true"></div>
                         </div>
                         <p class="language-description">Just start learning</p>
                     </li>
 
                     <li class="language-item">
-                        <h3 class="language-name">English</h3>
-                        <div class="ring-container p-75">
-                            <div class="progress-text">75%</div>
+                        <h3 class="language-name" id="lang-english">English</h3>
+                        <div
+                            class="ring-container p-75"
+                            role="meter"
+                            aria-labelledby="lang-english"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="75"
+                            aria-valuetext="Intermediate, watches films and reads literature"
+                        >
+                            <div class="progress-text" aria-hidden="true">75%</div>
                             <div class="progress-ring" aria-hidden="true"></div>
                         </div>
                         <p class="language-description">Watch films and read literature</p>
@@ -495,7 +557,11 @@
 
                 <ul class="contacts-list">
                     <li>
-                        <a href="mailto:makarenkoanna@yandex.ru" class="contact-link">
+                        <a
+                            href="mailto:makarenkoanna@yandex.ru"
+                            class="contact-link"
+                            aria-label="Email: makarenkoanna@yandex.ru"
+                        >
                             <span class="contact-icon contact-icon--email" aria-hidden="true"></span>
                             <span class="contact-label">E-mail</span>
                         </a>
@@ -506,6 +572,7 @@
                             class="contact-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Telegram: @annie_in_life"
                         >
                             <span class="contact-icon contact-icon--telegram" aria-hidden="true"></span>
                             <span class="contact-label">Telegram</span>
@@ -517,6 +584,7 @@
                             class="contact-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="LinkedIn profile"
                         >
                             <span class="contact-icon contact-icon--linkedin" aria-hidden="true"></span>
                             <span class="contact-label">LinkedIn</span>
@@ -528,6 +596,7 @@
                             class="contact-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="GitHub: theFoxTale"
                         >
                             <span class="contact-icon contact-icon--github" aria-hidden="true"></span>
                             <span class="contact-label">GitHub</span>

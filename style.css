@@ -194,17 +194,6 @@ pre {
     background: var(--cv-black) url(assets/img/bg-stars.png) fixed calc(50%) 0
 }
 
-.footer-center-div {
-    width: 60%;
-}
-
-.flex-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-}
-
 .content-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -212,13 +201,16 @@ pre {
 
 .cv-footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     padding: 14px 0;
     margin-top: 24px;
     border-top: 2px solid var(--cv-blue);
     border-image: linear-gradient(to right top, var(--cv-violet), var(--cv-blue), var(--cv-violet)) 1;
+}
+
+.cv-footer p {
+    margin: 0;
 }
 
 .cv-header {
@@ -237,7 +229,7 @@ pre {
 }
 
 .main-section {
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 30px 20px;
     width: 100%;
 }
 
@@ -259,15 +251,6 @@ pre {
     text-align: center;
 }
 
-.github-image {
-    width: 30px;
-    height: 30px;
-}
-
-.rs-image {
-    height: 60px;
-}
-
 .cv-photo {
     width: 300px;
     height: 300px;
@@ -281,7 +264,7 @@ pre {
     overflow: visible;
     border-radius: 40px;
     background-color: var(--transparent-violet);
-    margin: 20px 0;
+    margin: 0 0 30px;
     padding: 20px;
 }
 
@@ -390,7 +373,7 @@ pre {
 
 .nav {
     width: 100%;
-    margin: 20px 0;
+    margin: 60px 0 0;
 }
 
 .nav-list {
@@ -466,14 +449,6 @@ pre {
     font-size: inherit;
     font-weight: inherit;
     color: inherit;
-}
-
-.hidden-link {
-    text-decoration: none;
-    color: var(--text-muted);
-}
-.hidden-link:hover {
-    color: var(--cv-blue);
 }
 
 .project-div {
@@ -696,6 +671,68 @@ pre {
 .language-description {
     margin: 15px 0 0;
     text-align: center;
+}
+
+.contacts-list {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    color: var(--cv-violet);
+}
+
+.contact-link:focus-visible {
+    outline: 3px solid var(--cv-blue);
+    outline-offset: 3px;
+}
+
+.contact-icon {
+    --contact-icon: none;
+
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--cv-blue);
+    mask: var(--contact-icon) center / contain no-repeat;
+    -webkit-mask: var(--contact-icon) center / contain no-repeat;
+}
+
+.contact-icon--email {
+    --contact-icon: url("assets/contacts/email.svg");
+}
+
+.contact-icon--telegram {
+    --contact-icon: url("assets/contacts/telegram.svg");
+}
+
+.contact-icon--linkedin {
+    --contact-icon: url("assets/contacts/linkedin.svg");
+}
+
+.contact-icon--github {
+    --contact-icon: url("assets/contacts/github.svg");
+}
+
+.contact-label {
+    line-height: 1;
 }
 
 .ring-container {

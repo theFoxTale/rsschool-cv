@@ -1104,9 +1104,18 @@ button:focus-visible {
     }
 
     .contacts {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-items: center;
         align-items: center;
-        gap: 16px;
+        gap: 20px 16px;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .contact {
+        justify-content: center;
+        width: 100%;
     }
 
     .scroll-top {
@@ -1207,6 +1216,16 @@ button:focus-visible {
     .footer__copy {
         font-size: 14px;
         text-align: center;
+    }
+
+    .contacts {
+        gap: 16px 12px;
+        max-width: 100%;
+    }
+
+    .contact {
+        gap: 8px;
+        font-size: 15px;
     }
 }
 

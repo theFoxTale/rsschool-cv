@@ -1090,6 +1090,19 @@ button:focus-visible {
         font-size: 22px;
     }
 
+    .skills__tags {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px 12px;
+        padding-bottom: 8px;
+    }
+
+    .skills__tag {
+        padding-left: 18px;
+        font-size: 16px;
+        background-position: 0 8px;
+    }
+
     .projects__item {
         width: 100%;
         max-width: 420px;
@@ -1226,6 +1239,17 @@ button:focus-visible {
     .contact {
         gap: 8px;
         font-size: 15px;
+    }
+
+    .skills__tags {
+        gap: 4px 8px;
+    }
+
+    .skills__tag {
+        padding-left: 16px;
+        font-size: 14px;
+        background-size: 8px;
+        background-position: 0 7px;
     }
 }
 

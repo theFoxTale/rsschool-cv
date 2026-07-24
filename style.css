@@ -92,6 +92,15 @@
 
     --ring-size: 200px;
     --container-width: 1200px;
+    --page-padding-x: 24px;
+    --photo-size: 300px;
+    --social-orbit: 130px;
+    --social-icon-size: 48px;
+    --font-size-base: 20px;
+    --font-size-surname: 80px;
+    --font-size-name: 60px;
+    --font-size-role: 30px;
+    --font-size-nav: 22px;
 
     --font-display: "Outfit";
     --font-body: "Source Sans 3";
@@ -116,7 +125,7 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font-body), sans-serif;
-    font-size: 20px;
+    font-size: var(--font-size-base);
     font-weight: 400;
     line-height: 1.5;
     color: var(--text-muted);
@@ -161,6 +170,7 @@ button:focus-visible {
 .page__container {
     max-width: var(--container-width);
     margin: 0 auto;
+    padding-inline: var(--page-padding-x);
 }
 
 .page__main {
@@ -207,7 +217,7 @@ button:focus-visible {
 .intro__surname {
     display: block;
     margin: 0;
-    font-size: 80px;
+    font-size: var(--font-size-surname);
     font-weight: 800;
     line-height: 1;
     color: var(--color-blue);
@@ -216,7 +226,7 @@ button:focus-visible {
 .intro__name {
     display: block;
     margin: 0 0 30px;
-    font-size: 60px;
+    font-size: var(--font-size-name);
     font-weight: 600;
     line-height: 1;
     color: var(--color-violet);
@@ -225,7 +235,7 @@ button:focus-visible {
 .intro__role {
     margin: 0;
     font-family: var(--font-display), sans-serif;
-    font-size: 30px;
+    font-size: var(--font-size-role);
     font-weight: 800;
     line-height: 1;
 }
@@ -236,8 +246,8 @@ button:focus-visible {
 }
 
 .intro__photo {
-    width: 300px;
-    height: 300px;
+    width: var(--photo-size);
+    height: var(--photo-size);
     border-radius: 50%;
     box-shadow:
         -5px 5px 10px 5px var(--color-blue),
@@ -264,8 +274,8 @@ button:focus-visible {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 48px;
-    height: 48px;
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,42 +312,42 @@ button:focus-visible {
 
 .social__link--telegram {
     --social-icon: url("assets/contacts/telegram.svg");
-    transform: translate(130px);
+    transform: translate(var(--social-orbit));
 }
 
 .social__link--telegram:hover,
 .social__link--telegram:focus-visible {
-    transform: translate(130px) scale(1.06);
+    transform: translate(var(--social-orbit)) scale(1.06);
 }
 
 .social__link--linkedin {
     --social-icon: url("assets/contacts/linkedin.svg");
-    transform: rotate(32deg) translate(129px) rotate(-32deg);
+    transform: rotate(32deg) translate(var(--social-orbit)) rotate(-32deg);
 }
 
 .social__link--linkedin:hover,
 .social__link--linkedin:focus-visible {
-    transform: rotate(32deg) translate(129px) rotate(-32deg) scale(1.06);
+    transform: rotate(32deg) translate(var(--social-orbit)) rotate(-32deg) scale(1.06);
 }
 
 .social__link--github {
     --social-icon: url("assets/contacts/github.svg");
-    transform: rotate(64deg) translate(125px) rotate(-64deg);
+    transform: rotate(64deg) translate(var(--social-orbit)) rotate(-64deg);
 }
 
 .social__link--github:hover,
 .social__link--github:focus-visible {
-    transform: rotate(64deg) translate(125px) rotate(-64deg) scale(1.06);
+    transform: rotate(64deg) translate(var(--social-orbit)) rotate(-64deg) scale(1.06);
 }
 
 .social__link--email {
     --social-icon: url("assets/contacts/email.svg");
-    transform: rotate(96deg) translate(130px) rotate(-96deg);
+    transform: rotate(96deg) translate(var(--social-orbit)) rotate(-96deg);
 }
 
 .social__link--email:hover,
 .social__link--email:focus-visible {
-    transform: rotate(96deg) translate(130px) rotate(-96deg) scale(1.06);
+    transform: rotate(96deg) translate(var(--social-orbit)) rotate(-96deg) scale(1.06);
 }
 
 /* ========== Nav ========== */
@@ -349,8 +359,10 @@ button:focus-visible {
 
 .nav__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 8px 0;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -369,7 +381,7 @@ button:focus-visible {
 .nav__link {
     padding: 0 12px;
     font-family: var(--font-display), sans-serif;
-    font-size: 22px;
+    font-size: var(--font-size-nav);
     font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
@@ -751,7 +763,7 @@ button:focus-visible {
 
 .language__name {
     margin: 0 0 15px;
-    font-size: 28px;
+    font-size: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
     font-weight: 700;
     color: var(--color-violet);
 }
@@ -898,3 +910,383 @@ button:focus-visible {
     width: 40px;
     height: 40px;
 }
+
+/* ========== Responsive ========== */
+/*
+  Breakpoints (desktop-first):
+  - 100rem / 1600px — wide desktop
+  - 80rem  / 1280px — laptop
+  - 64rem  / 1024px — tablet landscape
+  - 48rem  / 768px  — tablet portrait
+  - 30rem  / 480px  — large phone
+  - 20rem  / 320px  — small phone
+*/
+
+@media (max-width: 100rem) {
+    :root {
+        --page-padding-x: 32px;
+    }
+}
+
+@media (max-width: 80rem) {
+    :root {
+        --page-padding-x: 28px;
+        --font-size-surname: 68px;
+        --font-size-name: 52px;
+        --font-size-role: 28px;
+        --font-size-nav: 20px;
+        --photo-size: 280px;
+        --social-orbit: 120px;
+    }
+
+    .nav {
+        margin-top: 48px;
+    }
+
+    .code-sample {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .code-sample__pre {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 64rem) {
+    :root {
+        --page-padding-x: 24px;
+        --font-size-base: 18px;
+        --font-size-surname: 56px;
+        --font-size-name: 42px;
+        --font-size-role: 24px;
+        --font-size-nav: 18px;
+        --photo-size: 240px;
+        --social-orbit: 108px;
+        --social-icon-size: 44px;
+        --ring-size: 160px;
+    }
+
+    .page {
+        background-attachment: scroll;
+    }
+
+    .intro {
+        padding-top: 40px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .intro__info {
+        width: 100%;
+    }
+
+    .intro__name {
+        margin-bottom: 16px;
+    }
+
+    .intro__media {
+        margin: 12px auto 0;
+    }
+
+    .nav {
+        margin-top: 36px;
+    }
+
+    .nav__link {
+        padding: 4px 10px;
+    }
+
+    .experience {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .experience__column--divided {
+        border-right: none;
+        border-image: none;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid var(--color-blue);
+        border-image: linear-gradient(to right, var(--color-violet), var(--color-blue), var(--color-violet)) 1;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 20px;
+    }
+
+    .progress {
+        width: 100%;
+    }
+
+    .projects {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .projects__item {
+        width: calc(50% - 10px);
+    }
+
+    .meter-ring__value {
+        font-size: 28px;
+    }
+
+    .meter-ring__visual {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 48rem) {
+    :root {
+        --page-padding-x: 20px;
+        --font-size-base: 17px;
+        --font-size-surname: 44px;
+        --font-size-name: 34px;
+        --font-size-role: 22px;
+        --font-size-nav: 16px;
+        --photo-size: 200px;
+        --social-orbit: 94px;
+        --social-icon-size: 40px;
+        --ring-size: 140px;
+    }
+
+    .intro {
+        padding-top: 32px;
+        gap: 20px;
+    }
+
+    .section {
+        padding: 0 0 24px;
+    }
+
+    .about {
+        border-radius: 24px;
+        padding: 16px;
+    }
+
+    .education {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .education__date {
+        margin: 0;
+    }
+
+    .job {
+        grid-template-columns: 64px 64px 1fr;
+        gap: 0 4px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skills__item {
+        font-size: 22px;
+    }
+
+    .projects__item {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .project-card__media {
+        height: 180px;
+    }
+
+    .languages {
+        gap: 24px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .scroll-top {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .scroll-top__icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 30rem) {
+    :root {
+        --page-padding-x: 16px;
+        --font-size-base: 16px;
+        --font-size-surname: 36px;
+        --font-size-name: 28px;
+        --font-size-role: 18px;
+        --font-size-nav: 14px;
+        --photo-size: 170px;
+        --social-orbit: 82px;
+        --social-icon-size: 36px;
+        --ring-size: 120px;
+    }
+
+    .intro {
+        padding-top: 24px;
+    }
+
+    .intro__photo {
+        box-shadow:
+            -3px 3px 8px 3px var(--color-blue),
+            3px -3px 8px 3px var(--color-violet);
+    }
+
+    .nav {
+        margin-top: 28px;
+    }
+
+    .nav__list {
+        gap: 6px 4px;
+    }
+
+    .nav__link {
+        padding: 2px 8px;
+    }
+
+    .section__title {
+        font-size: 20px;
+    }
+
+    .section__title-bar {
+        padding: 8px 12px;
+    }
+
+    .job {
+        grid-template-columns: 56px 56px 1fr;
+    }
+
+    .job__date {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+    .job__list {
+        padding-left: 12px;
+        font-size: 15px;
+    }
+
+    .project-card {
+        border-radius: 28px;
+    }
+
+    .project-card__media {
+        height: 150px;
+    }
+
+    .project-card__cta {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+
+    .code-sample__pre {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .meter-ring__value {
+        font-size: 22px;
+    }
+
+    .meter-ring__visual {
+        padding: 18px;
+    }
+
+    .footer__copy {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 20rem) {
+    :root {
+        --page-padding-x: 12px;
+        --font-size-base: 15px;
+        --font-size-surname: 30px;
+        --font-size-name: 24px;
+        --font-size-role: 16px;
+        --font-size-nav: 13px;
+        --photo-size: 148px;
+        --social-orbit: 74px;
+        --social-icon-size: 32px;
+        --ring-size: 110px;
+    }
+
+    .intro__name {
+        margin-bottom: 12px;
+    }
+
+    .social__link--linkedin {
+        transform: rotate(34deg) translate(var(--social-orbit)) rotate(-34deg);
+    }
+
+    .social__link--linkedin:hover,
+    .social__link--linkedin:focus-visible {
+        transform: rotate(34deg) translate(var(--social-orbit)) rotate(-34deg) scale(1.06);
+    }
+
+    .social__link--github {
+        transform: rotate(68deg) translate(var(--social-orbit)) rotate(-68deg);
+    }
+
+    .social__link--github:hover,
+    .social__link--github:focus-visible {
+        transform: rotate(68deg) translate(var(--social-orbit)) rotate(-68deg) scale(1.06);
+    }
+
+    .social__link--email {
+        transform: rotate(102deg) translate(var(--social-orbit)) rotate(-102deg);
+    }
+
+    .social__link--email:hover,
+    .social__link--email:focus-visible {
+        transform: rotate(102deg) translate(var(--social-orbit)) rotate(-102deg) scale(1.06);
+    }
+
+    .job {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .job__date--wide,
+    .job__header,
+    .job__body {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .job__line,
+    .job__spacer {
+        display: none;
+    }
+
+    .job__date {
+        margin: 0;
+    }
+
+    .job__body {
+        padding-left: 0;
+    }
+
+    .languages {
+        gap: 20px;
+    }
+
+    .language {
+        width: 100%;
+    }
+}
+

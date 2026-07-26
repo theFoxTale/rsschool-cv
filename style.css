@@ -647,8 +647,8 @@ button:focus-visible {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 50px;
-    text-decoration: none;
+    border-radius: 28px;
+    background-color: var(--color-violet-soft);
     color: inherit;
 }
 
@@ -665,73 +665,117 @@ button:focus-visible {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 2s ease;
+    transition: transform 0.45s ease;
 }
 
-.project-card__overlay {
-    position: absolute;
-    inset: 0;
+.project-card:hover .project-card__image {
+    transform: scale(1.06);
+}
+
+.project-card__body {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-overlay);
-    transition: background-color var(--transition-fast);
-}
-
-.project-card__cta {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--color-blue);
-    color: var(--text-on-accent);
-    font-size: 18px;
-    opacity: 0;
-    box-shadow: 0 8px 25px var(--color-shadow-strong);
-    transition: opacity var(--transition-fast);
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    padding: 16px 18px 18px;
 }
 
 .project-card__title {
-    display: block;
-    margin-top: 12px;
-    padding: 0 8px;
+    margin: 0;
+    font-family: var(--font-display), sans-serif;
+    font-size: 22px;
     font-weight: 700;
-    text-align: center;
     color: var(--text-strong);
 }
 
-.project-card:hover .project-card__overlay,
-.project-card:focus-visible .project-card__overlay {
-    background-color: var(--color-overlay-hover);
+.project-card__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--text-muted);
 }
 
-.project-card:hover .project-card__image,
-.project-card:focus-visible .project-card__image {
-    transform: scale(1.4);
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
 }
 
-.project-card:hover .project-card__cta,
-.project-card:focus-visible .project-card__cta {
-    opacity: 1;
+.project-card__tag {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: rgba(var(--color-blue-rgb), 0.35);
+    color: var(--text-strong);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.project-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.project-card__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 84px;
+    padding: 8px 14px;
+    border: 1px solid var(--color-blue);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-blue);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.project-card__link:hover,
+.project-card__link:focus-visible {
+    color: var(--text-on-accent);
+    background-color: var(--color-blue);
+}
+
+.project-card__link--accent {
+    background-color: var(--color-blue);
+    color: var(--text-on-accent);
+}
+
+.project-card__link--accent:hover,
+.project-card__link--accent:focus-visible {
+    background-color: var(--color-violet);
+    border-color: var(--color-violet);
 }
 
 .code-sample {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 40px;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
 }
 
-.code-sample__title {
+.code-sample__note {
     margin: 0;
-    font-weight: 700;
-    color: var(--text-strong);
+    color: var(--text-muted);
 }
 
 .code-sample__pre {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0 20px;
+    padding: 16px 20px;
+    overflow-x: auto;
     border: 5px solid transparent;
     border-image: linear-gradient(
         to left top,
@@ -943,14 +987,8 @@ button:focus-visible {
         margin-top: 48px;
     }
 
-    .code-sample {
-        flex-direction: column;
-        gap: 16px;
-    }
-
     .code-sample__pre {
         width: 100%;
-        overflow-x: auto;
     }
 }
 
@@ -1201,20 +1239,23 @@ button:focus-visible {
     }
 
     .project-card {
-        border-radius: 28px;
+        border-radius: 22px;
     }
 
     .project-card__media {
         height: 150px;
     }
 
-    .project-card__cta {
-        font-size: 16px;
-        padding: 8px 14px;
+    .project-card__title {
+        font-size: 20px;
+    }
+
+    .project-card__text {
+        font-size: 15px;
     }
 
     .code-sample__pre {
-        padding: 0 12px;
+        padding: 12px;
         font-size: 13px;
     }
 

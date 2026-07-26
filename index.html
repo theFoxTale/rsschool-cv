@@ -88,6 +88,7 @@
                     <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#code-example" class="nav__link">Code</a></li>
                     <li class="nav__item"><a href="#languages" class="nav__link">Languages</a></li>
                     <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
                 </ul>
@@ -406,81 +407,116 @@
 
             <section class="section" id="projects" aria-labelledby="projects-title">
                 <div class="section__title-bar">
-                    <h2 class="section__title" id="projects-title">PROJECTS &amp; CODE EXAMPLES</h2>
+                    <h2 class="section__title" id="projects-title">PROJECTS</h2>
                 </div>
 
-                <h3 class="section__subtitle">Favorite projects</h3>
                 <ul class="projects">
                     <li class="projects__item">
-                        <a
-                            href="https://github.com/theFoxTale/the-fox-tales-bot"
-                            class="project-card"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span class="project-card__media">
+                        <article class="project-card">
+                            <div class="project-card__media">
                                 <img
                                     class="project-card__image"
                                     src="./assets/projects/wood.webp"
                                     alt=""
                                     loading="lazy"
                                 >
-                                <span class="project-card__overlay">
-                                    <span class="project-card__cta">Go to code</span>
-                                </span>
-                            </span>
-                            <span class="project-card__title">The Fox Tales Bot</span>
-                        </a>
+                            </div>
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">The Fox Tales Bot</h3>
+                                <p class="project-card__text">Telegram bot for interactive fairy-tale quizzes and storytelling.</p>
+                                <ul class="project-card__tags">
+                                    <li class="project-card__tag">JavaScript</li>
+                                    <li class="project-card__tag">Telegram API</li>
+                                    <li class="project-card__tag">Node.js</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a
+                                        class="project-card__link"
+                                        href="https://github.com/theFoxTale/the-fox-tales-bot"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >Code</a>
+                                </div>
+                            </div>
+                        </article>
                     </li>
 
                     <li class="projects__item">
-                        <a
-                            href="https://github.com/theFoxTale/rsschool-cv"
-                            class="project-card"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span class="project-card__media">
+                        <article class="project-card">
+                            <div class="project-card__media">
                                 <img
                                     class="project-card__image"
                                     src="./assets/projects/goods.webp"
                                     alt=""
                                     loading="lazy"
                                 >
-                                <span class="project-card__overlay">
-                                    <span class="project-card__cta">Go to code</span>
-                                </span>
-                            </span>
-                            <span class="project-card__title">RS School CV</span>
-                        </a>
+                            </div>
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">Portfolio CV</h3>
+                                <p class="project-card__text">Personal CV page with semantic HTML, modern CSS, and responsive layout.</p>
+                                <ul class="project-card__tags">
+                                    <li class="project-card__tag">HTML5</li>
+                                    <li class="project-card__tag">CSS3</li>
+                                    <li class="project-card__tag">BEM</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a
+                                        class="project-card__link"
+                                        href="https://github.com/theFoxTale/rsschool-cv"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >Code</a>
+                                    <a
+                                        class="project-card__link project-card__link--accent"
+                                        href="https://thefoxtale.github.io/rsschool-cv/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >Demo</a>
+                                </div>
+                            </div>
+                        </article>
                     </li>
 
                     <li class="projects__item">
-                        <a
-                            href="https://github.com/theFoxTale/learn-data-science"
-                            class="project-card"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span class="project-card__media">
+                        <article class="project-card">
+                            <div class="project-card__media">
                                 <img
                                     class="project-card__image"
                                     src="./assets/projects/samchuk.webp"
                                     alt=""
                                     loading="lazy"
                                 >
-                                <span class="project-card__overlay">
-                                    <span class="project-card__cta">Go to code</span>
-                                </span>
-                            </span>
-                            <span class="project-card__title">Learn Data Science</span>
-                        </a>
+                            </div>
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">Learn Data Science</h3>
+                                <p class="project-card__text">Practice notes and exercises for data analysis and ML basics.</p>
+                                <ul class="project-card__tags">
+                                    <li class="project-card__tag">Python</li>
+                                    <li class="project-card__tag">Pandas</li>
+                                    <li class="project-card__tag">Jupyter</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a
+                                        class="project-card__link"
+                                        href="https://github.com/theFoxTale/learn-data-science"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >Code</a>
+                                </div>
+                            </div>
+                        </article>
                     </li>
                 </ul>
+            </section>
+
+            <section class="section" id="code-example" aria-labelledby="code-example-title">
+                <div class="section__title-bar">
+                    <h2 class="section__title" id="code-example-title">CODE EXAMPLE</h2>
+                </div>
 
                 <div class="code-sample">
-                    <h3 class="code-sample__title" id="code-example-title">Code example</h3>
-                    <pre class="code-sample__pre" aria-labelledby="code-example-title"><code>function setActiveVideoDot() {
+                    <p class="code-sample__note">Small JavaScript snippet that updates an active UI state indicator:</p>
+                    <pre class="code-sample__pre"><code>function setActiveVideoDot() {
   for (let dot of dotsList) {
     dot.classList.remove('video-active');
   }

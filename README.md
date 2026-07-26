@@ -80,11 +80,14 @@ rsschool-cv/
 ├── README.md
 ├── .gitignore
 └── assets/
-    ├── contacts/       # Social SVG icons
     ├── fonts/          # Local woff2 font files
-    ├── img/            # Photo, logos, background
-    ├── lists/          # List markers
-    └── projects/       # Project preview images (WebP)
+    ├── icons/
+    │   ├── social/     # Telegram, LinkedIn, GitHub, email SVGs
+    │   └── ui/         # Favicon, arrows, list markers
+    └── images/
+        ├── backgrounds/
+        ├── projects/   # Project preview WebP images
+        └── photo.jpg   # Profile photo
 ```
 
 ## RS School task

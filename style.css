@@ -164,7 +164,7 @@ button:focus-visible {
     flex-direction: column;
     justify-content: space-between;
     overflow-x: hidden;
-    background: var(--color-bg) url("assets/img/bg-stars.png") fixed 50% 0;
+    background: var(--color-bg) url("assets/images/backgrounds/stars.png") fixed 50% 0;
 }
 
 .page__container {
@@ -311,7 +311,7 @@ button:focus-visible {
 }
 
 .social__link--telegram {
-    --social-icon: url("assets/contacts/telegram.svg");
+    --social-icon: url("assets/icons/social/telegram.svg");
     transform: translate(var(--social-orbit));
 }
 
@@ -321,7 +321,7 @@ button:focus-visible {
 }
 
 .social__link--linkedin {
-    --social-icon: url("assets/contacts/linkedin.svg");
+    --social-icon: url("assets/icons/social/linkedin.svg");
     transform: rotate(32deg) translate(var(--social-orbit)) rotate(-32deg);
 }
 
@@ -331,7 +331,7 @@ button:focus-visible {
 }
 
 .social__link--github {
-    --social-icon: url("assets/contacts/github.svg");
+    --social-icon: url("assets/icons/social/github.svg");
     transform: rotate(64deg) translate(var(--social-orbit)) rotate(-64deg);
 }
 
@@ -341,7 +341,7 @@ button:focus-visible {
 }
 
 .social__link--email {
-    --social-icon: url("assets/contacts/email.svg");
+    --social-icon: url("assets/icons/social/email.svg");
     transform: rotate(96deg) translate(var(--social-orbit)) rotate(-96deg);
 }
 
@@ -548,7 +548,7 @@ button:focus-visible {
 .job__list {
     margin: 0;
     padding: 0 0 0 16px;
-    list-style-image: url("assets/lists/arrow.png");
+    list-style-image: url("assets/icons/ui/list-arrow.png");
 }
 
 /* ========== Skills ========== */
@@ -591,7 +591,7 @@ button:focus-visible {
     font-size: 18px;
     font-weight: 400;
     color: var(--text-muted);
-    background-image: url("assets/lists/marker.png");
+    background-image: url("assets/icons/ui/list-marker.png");
     background-repeat: no-repeat;
     background-position: 0 10px;
     background-size: 10px;
@@ -900,19 +900,19 @@ button:focus-visible {
 }
 
 .contact__icon--email {
-    --contact-icon: url("assets/contacts/email.svg");
+    --contact-icon: url("assets/icons/social/email.svg");
 }
 
 .contact__icon--telegram {
-    --contact-icon: url("assets/contacts/telegram.svg");
+    --contact-icon: url("assets/icons/social/telegram.svg");
 }
 
 .contact__icon--linkedin {
-    --contact-icon: url("assets/contacts/linkedin.svg");
+    --contact-icon: url("assets/icons/social/linkedin.svg");
 }
 
 .contact__icon--github {
-    --contact-icon: url("assets/contacts/github.svg");
+    --contact-icon: url("assets/icons/social/github.svg");
 }
 
 .contact__label {
